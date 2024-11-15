@@ -7,9 +7,9 @@ The name "Forge" is inspired from "Minecraft Forge". This project is aimed at be
 # Important: Branches
 
 * main: Has all the possible upstream changes from A1111, new samplers/schedulers/sd options/etc and some modifications in the backend compared to the original forge (mostly to load multiple checkpoints at the same time). It may be missing some new features related to the comfy backend (from 2024-01 and onwards when it's not samplers or model managament).
-* dev: This branch will have selective updates from Comfy upstream, more features/extensions vs main branch without affecting performance, and most of the time trying to not have important breaking-backend bugs.
-* experimental: This branch will have some experimental changes that may have major new features, but they may be incomplete or have major bugs, based on the dev branch.
-* dev2: This branch will have all applicable updates from Comfy upstream, may have more features vs dev branch, but performance may be affected and more features may not work.
+* dev: This branch has everything main has, and also has selective updates from Comfy upstream, more features/extensions, and most of the time trying to not have important breaking-backend bugs.
+* dev2: This branch has everything dev branch has, and all applicable updates from Comfy upstream, may have more features vs dev branch. Could have some more instabilities, but should also be generally stable for daily usage.
+* experimental: This branch will have some experimental changes that may have major new features, but they may be incomplete or have major bugs, based on the dev branch. This branch will be mostly inactive until I want to test things.
 * dev_upstream: Deprecated, see more https://github.com/Panchovix/stable-diffusion-webui-reForge/discussions/175
 * dev_upsteam_experimental: Deprecated, see more https://github.com/Panchovix/stable-diffusion-webui-reForge/discussions/175
 * main_new_forge: Deprecated, see more https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981.
@@ -54,6 +54,23 @@ git pull
 ```
 
 Pre-done package is WIP.
+
+# Important: Moved built-it extensions to separate repos
+
+Since the UI got really cluttered with built it extensions, I have removed some of them and made them separate repos. You can install them by the extension installer on the UI or doing `git clone repo.git` replacing `repo.git` with the following links, in the extensions folder.
+
+* reForge HiDiffusion (Raunet, MSW-MSWA): https://github.com/Panchovix/reforge_jankhidiffusion.git
+* Skimmed CFG: https://github.com/Panchovix/reForge-SkimmedCFG.git
+* Forge Style Align: https://github.com/Panchovix/sd_forge_stylealign.git
+* Forge Latent modifier: https://github.com/Panchovix/sd_forge_latent_modifier.git
+* reForge Sigmas Merge: https://github.com/Panchovix/reForge-Sigmas_merge.git
+* Differential Diffusion: https://github.com/Panchovix/reForge-DifferentialDiffusion.git
+* Auomatic CFG: https://github.com/Panchovix/reForge-AutomaticCFG.git
+* reForge_Advanced_CLIP_Text_Encode (not working yet): https://github.com/Panchovix/reForge_Advanced_CLIP_Text_Encode.git
+* Hunyuan-DiT-for-webUI-main: https://github.com/Panchovix/Hunyuan-DiT-for-webUI-main.git
+* PixArt-Sigma-for-webUI-main: https://github.com/Panchovix/PixArt-Sigma-for-webUI-main.git
+* StableCascade-for-webUI-main: https://github.com/Panchovix/StableCascade-for-webUI-main.git
+* StableDiffusion3-for-webUI-main: https://github.com/Panchovix/StableDiffusion3-for-webUI-main.git
 
 # Forge/reForge Backend
 
@@ -132,6 +149,12 @@ Some extra flags that can help with performance or save VRAM, or more, depending
 Again, Forge/reForge do not recommend users to use any cmd flags unless you are very sure that you really need these.
 
 # Original "Old" Forge (commit https://github.com/lllyasviel/stable-diffusion-webui-forge/commit/bfee03d8d9415a925616f40ede030fe7a51cbcfd) information.
+
+# Important: https://github.com/Metachs/sdwebui-nai-api breaks sending images from txt2img to img2img
+
+This is important to mention if you use this extension. Using it will make sending images from txt2img to img2img have broken metadata, which causes multiple issues with built it controlnet and other extensions.
+
+If you want to use this extension, I suggest to use it on original A1111.
 
 # Screenshots of Comparison (by Illyasviel)
 
