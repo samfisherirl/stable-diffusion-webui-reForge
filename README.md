@@ -1,5 +1,10 @@
 # Stable Diffusion WebUI Forge/reForge
 
+see comment and https://github.com/samfisherirl/sd-reforge-deforum
+
+
+
+
 Stable Diffusion WebUI Forge/reForge is a platform on top of [Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (based on [Gradio](https://www.gradio.app/)) to make development easier, optimize resource management, speed up inference, and study experimental features.
 
 The name "Forge" is inspired from "Minecraft Forge". This project is aimed at becoming SD WebUI's Forge.
